@@ -9,4 +9,4 @@ class RestaurantCreneau(Base):
     id_restaurant = Column(
         Integer, ForeignKey("restaurant.id_restaurant"), nullable=False
     )
-    __table_args__ = PrimaryKeyConstraint("id_creneau", "id_restaurant")
+    __table_args__ = (PrimaryKeyConstraint("id_creneau", "id_restaurant"),)

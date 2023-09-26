@@ -9,4 +9,4 @@ class Reserver(Base):
     id_client = Column(Integer, ForeignKey("client.id_client"), nullable=False)
     allergene = Column(String(50), nullable=False)
     nb_personne = Column(Integer, nullable=False)
-    __table_args__ = PrimaryKeyConstraint("id_creneau", "id_client")
+    __table_args__ = (PrimaryKeyConstraint("id_creneau", "id_client"),)
